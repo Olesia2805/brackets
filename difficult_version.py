@@ -1,9 +1,3 @@
-brackets = {
-        "(": ")",
-        "[": "]",
-        "{": "}"
-        }
-
 def find_correct_position_brackets (str):
     copy_str = str[:]
     
@@ -11,23 +5,16 @@ def find_correct_position_brackets (str):
         return 'valid'
     
     while copy_str != '':
-        symbol = copy_str[0]
-
-        if symbol in brackets.keys():
-            couple = brackets[symbol]
-
-            if copy_str.find(couple) != -1:
-                copy_str = copy_str.replace(symbol, '', 1)
-                copy_str = copy_str.replace(couple, '', 1)
-
-            else:
-                return "invalid"
-            
+        if ('()') in copy_str:
+            copy_str = copy_str.replace('()', '')
+        elif ('[]') in copy_str:
+            copy_str = copy_str.replace('[]', '')
+        elif ('{}') in copy_str:
+            copy_str = copy_str.replace('{}', '')
         else:
-            return "invalid"
-                
+            return 'invalid'
             
-    return "valid"
+    return 'valid'
 
 print ('1: ' + find_correct_position_brackets('(())')) #valid
 print ('2: ' + find_correct_position_brackets('')) #valid
