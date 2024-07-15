@@ -1,7 +1,3 @@
-brackets = {
-        "(": ")",
-        }
-
 def find_correct_position_brackets (str):
     copy_str = str[:]
     
