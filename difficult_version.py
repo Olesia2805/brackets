@@ -19,6 +19,7 @@ print ('3: ' + find_correct_position_brackets('(()')) #invalid
 print ('4: ' + find_correct_position_brackets(')(()')) #invalid
 print ('5: ' + find_correct_position_brackets('(((')) #invalid
 
+#TODO
 print ('6: ' + find_correct_position_brackets('({)}')) #invalid
 print ('7: ' + find_correct_position_brackets('[{()}]')) #valid
 print ('8: ' + find_correct_position_brackets('{[(])}')) #invalid
